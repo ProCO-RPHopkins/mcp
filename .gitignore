@@ -19,4 +19,4 @@ __pycache__/
 
 dist/
 
-.venv/
+.venv/reports/*.log
