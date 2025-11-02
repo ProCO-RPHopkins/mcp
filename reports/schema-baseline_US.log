@@ -1,0 +1,9 @@
+[Timestamp: 2025-11-02T18:00:19Z] VS Code + mcp-remote 0.1.29
+Region: US (connected via https://mcp.posthog.com/sse)
+Discovered 43 tools
+4 tools have invalid JSON schemas and will be omitted
+# Snippet from Output panel:
+# ...
+# [info] Discovered 43 tools
+# ...
+# [warning] 4 tools have invalid JSON schemas and will be omitted
