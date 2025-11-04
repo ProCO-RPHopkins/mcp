@@ -1,0 +1,25 @@
+Auth check: Found header variable starting with: "${AUTH.substring(0, 10)}..."
+Connecting to ${MCP_URL} using StreamableHTTPClientTransport...
+Connection successful.
+Fetching tool list...
+---
+Tools fetched: ${tools.length}
+Invalid schemas: ${invalid.length}
+---
+
+Tool: create-feature-flag
+AJV Compile Error: Error: schema is invalid: data/properties/filters/properties/groups/items/properties/properties/items/properties/operator/enum must NOT have duplicate items (items ## 12 and 22 are identical), data/properties/filters/properties/groups/items/properties/properties/items must be array, data/properties/filters/properties/groups/items/properties/properties/items must match a schema in anyOf, data/properties/filters/properties/groups/items must be array, data/properties/filters/properties/groups/items must match a schema in anyOf
+
+Tool: update-feature-flag
+AJV Compile Error: Error: schema is invalid: data/properties/data/properties/filters/properties/groups/items/properties/properties/items/properties/operator/enum must NOT have duplicate items (items ## 12 and 22 are identical), data/properties/data/properties/filters/properties/groups/items/properties/properties/items must be array, data/properties/data/properties/filters/properties/groups/items/properties/properties/items must match a schema in anyOf, data/properties/data/properties/filters/properties/groups/items must be array, data/properties/data/properties/filters/properties/groups/items must match a schema in anyOf
+
+Tool: query-run
+AJV Compile Error: Error: strict mode: use allowUnionTypes to allow union type keyword at "#/properties/query/anyOf/0/properties/source/anyOf/0/properties/breakdownFilter/properties/breakdown/anyOf/0/anyOf/2/items" (strictTypes)
+
+Tool: survey-create
+AJV Compile Error: Error: schema is invalid: data/properties/targeting_flag_filters/properties/groups/items/properties/properties/items/properties/operator/enum must NOT have duplicate items (items ## 12 and 22 are identical), data/properties/targeting_flag_filters/properties/groups/items/properties/properties/items must be array, data/properties/targeting_flag_filters/properties/groups/items/properties/properties/items must match a schema in anyOf, data/properties/targeting_flag_filters/properties/groups/items must be array, data/properties/targeting_flag_filters/properties/groups/items must match a schema in anyOf
+
+Tool: survey-update
+AJV Compile Error: Error: schema is invalid: data/properties/targeting_flag_filters/properties/groups/items/properties/properties/items/properties/operator/enum must NOT have duplicate items (items ## 12 and 22 are identical), data/properties/targeting_flag_filters/properties/groups/items/properties/properties/items must be array, data/properties/targeting_flag_filters/properties/groups/items/properties/properties/items must match a schema in anyOf, data/properties/targeting_flag_filters/properties/groups/items must be array, data/properties/targeting_flag_filters/properties/groups/items must match a schema in anyOf
+
+Client disconnected gracefully.
