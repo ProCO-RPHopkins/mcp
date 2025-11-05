@@ -9,21 +9,21 @@ import { describe, it, expect } from "vitest";
  * `describe.skip` to `describe` to enforce schema validity in CI.
  */
 describe.skip("tool input schemas compile under AJV strict mode (enable after #141)", () => {
-  const ajv = new Ajv({ allErrors: true, strict: true });
-  addFormats(ajv);
+	const ajv = new Ajv({ allErrors: true, strict: true });
+	addFormats(ajv);
 
-  // NOTE: test file is at typescript/tests/unit/..., schemas are at repo_root/schema/...
-  const raw = readFileSync(new URL("../../../schema/tool-inputs.json", import.meta.url), "utf-8");
-  const inputs = JSON.parse(raw) as Record<string, unknown>;
-  const toolSchemas = Object.entries(inputs);
+	// NOTE: test file is at typescript/tests/unit/..., schemas are at repo_root/schema/...
+	const raw = readFileSync(new URL("../../../schema/tool-inputs.json", import.meta.url), "utf-8");
+	const inputs = JSON.parse(raw) as Record<string, unknown>;
+	const toolSchemas = Object.entries(inputs);
 
-  it("schemas file is non-empty", () => {
-    expect(toolSchemas.length).toBeGreaterThan(0);
-  });
+	it("schemas file is non-empty", () => {
+		expect(toolSchemas.length).toBeGreaterThan(0);
+	});
 
-  for (const [name, schema] of toolSchemas) {
-    it(`${name} compiles`, () => {
-      expect(() => ajv.compile(schema as object)).not.toThrow();
-    });
-  }
+	for (const [name, schema] of toolSchemas) {
+		it(`${name} compiles`, () => {
+			expect(() => ajv.compile(schema as object)).not.toThrow();
+		});
+	}
 });
